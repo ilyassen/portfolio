@@ -1,0 +1,39 @@
+{
+  "resume": {
+    "summary": "Experienced web developer with a passion for building beautiful and functional user interfaces."
+ 
+  },
+  "education": [
+    {
+      "degree": "B.Sc. in Computer Science",
+      "institution": "State University",
+      "year": "2019"
+    }
+  ],
+  "Experiences": [
+    {
+      "position": "Frontend Developer",
+      "company": "TechCorp",
+      "years": "2021-Present",
+      "description": "Developing and maintaining web applications using React and Next.js."
+    },
+    {
+      "position": "Web Developer",
+      "company": "Webify",
+      "years": "2019-2021",
+      "description": "Built responsive websites and web apps for various clients."
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "React",
+    "Next.js",
+    "CSS",
+    "Tailwind CSS"
+  ],
+  "hobbies": [
+    "Photography",
+    "Traveling",
+    "Reading tech blogs"
+  ]
+} 
