@@ -1,37 +1,32 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
-  const [lang, setLang] = useState('EN');
+  const { lang, toggleLang } = useLanguage();
 
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
 
-  const toggleLang = () => {
-    setLang(lang === 'EN' ? 'FR' : 'EN');
-  };
-  
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
-
-
   return (
     <header className="w-full py-4 bg-gray-900 text-white text-center text-2xl font-bold shadow-md flex justify-between items-center px-8">
-      <span>My Portfolio</span>
+      <span>{translations[lang].portfolio}</span>
       <div className="flex items-center gap-2">
-      <button
+        <button
           onClick={toggleLang}
           className="bg-gray-700 text-white px-2 py-1 rounded hover:bg-gray-600 transition-colors text-xs font-semibold"
           aria-label="Switch language"
         >
           {lang}
         </button>
-        
         <button
           onClick={toggleTheme}
           className="bg-gray-700 text-white p-2 rounded hover:bg-gray-600 transition-colors flex items-center justify-center"
@@ -50,7 +45,6 @@ const Header = () => {
             </svg>
           )}
         </button>
-        
       </div>
     </header>
   );

@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 const Resume = () => {
   const [summary, setSummary] = useState("");
+  const { lang } = useLanguage();
 
   useEffect(() => {
     import("../data/profile.json")
@@ -15,8 +18,9 @@ const Resume = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-bold mb-2">Resume</h2>
-      <p>{summary}</p>
+      <h2 className="text-xl font-bold mb-2">{translations[lang].resume}</h2>
+      {/* <p>{summary}</p> */}
+      <p>{translations[lang].summary}</p>
     </section>
   );
 };

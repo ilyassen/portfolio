@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 const Hobbies = () => {
   const [hobbies, setHobbies] = useState<string[]>([]);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     import("../data/profile.json")
@@ -15,7 +18,7 @@ const Hobbies = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-bold mb-2">Hobbies</h2>
+      <h2 className="text-xl font-bold mb-2">{translations[lang].hobbies}</h2>
       {hobbies.length === 0 ? (
         <p>No hobbies found.</p>
       ) : (

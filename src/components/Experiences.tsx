@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 type Experience = {
   position: string;
@@ -11,6 +13,7 @@ type Experience = {
 
 const Experiences = () => {
   const [experiences, setExperiences] = useState<Experience[]>([]);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     import("../data/profile.json")
@@ -22,7 +25,7 @@ const Experiences = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-bold mb-2">Work Experience</h2>
+      <h2 className="text-xl font-bold mb-2">{translations[lang].experiences}</h2>
       {experiences.length === 0 ? (
         <p>No experiences found.</p>
       ) : (

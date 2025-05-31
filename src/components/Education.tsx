@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 type EducationItem = {
   degree: string;
@@ -10,6 +12,7 @@ type EducationItem = {
 
 const Education = () => {
   const [education, setEducation] = useState<EducationItem[]>([]);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     import("../data/profile.json")
@@ -21,7 +24,7 @@ const Education = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-bold mb-2">Education</h2>
+      <h2 className="text-xl font-bold mb-2">{translations[lang].education}</h2>
       {education.length === 0 ? (
         <p>No education data found.</p>
       ) : (
