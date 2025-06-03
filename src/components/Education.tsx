@@ -15,7 +15,7 @@ const Education = () => {
   const { lang } = useLanguage();
 
   useEffect(() => {
-    import("../data/profile.json")
+    import("../data/cv.json")
       .then((data) => {
         setEducation(data.default?.education || data.education || []);
       })

@@ -9,7 +9,7 @@ const Skills = () => {
   const { lang } = useLanguage();
 
   useEffect(() => {
-    import("../data/profile.json")
+    import("../data/cv.json")
       .then((data) => {
         setSkills(data.default?.skills || data.skills || []);
       })

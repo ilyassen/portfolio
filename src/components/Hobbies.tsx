@@ -9,7 +9,7 @@ const Hobbies = () => {
   const { lang } = useLanguage();
 
   useEffect(() => {
-    import("../data/profile.json")
+    import("../data/cv.json")
       .then((data) => {
         setHobbies(data.default?.hobbies || data.hobbies || []);
       })

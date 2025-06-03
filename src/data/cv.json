@@ -1,0 +1,58 @@
+{
+  "resume": {
+    "summary": "Analyste programmeur et développeur fullstack avec une expérience variée en développement logiciel, optimisation de systèmes, et gestion de projets, maîtrisant plusieurs technologies et travaillant dans des environnements agiles."
+  },
+  "education": [
+    {
+      "degree": "Formation professionnelle de Gestion d'entreprise",
+      "institution": "Centre de formation prof des Riverains, Montréal, Canada.",
+      "year": "Sep. 2024 – Jan 2025"
+    },
+    {
+      "degree": "Maîtrise en génie logiciel (profil projet) – GPA 3.42",
+      "institution": "École de technologie supérieure, Montréal, Canada.",
+      "year": "Jan. 2019 à Sept. 2021"
+    },
+    {
+      "degree": "Diplôme d'ingénieur en développement informatique",
+      "institution": "École marocaine des sciences de l'ingénieur (EMSI), Casablanca, Maroc.",
+      "year": "Oct. 2012 – Juin 2017"
+    }
+  ],
+  "Experiences": [
+    {
+      "position": "Analyste programmeur",
+      "company": "Banque nationale du Canada",
+      "years": "Fév. 2022 – Avr. 2023",
+      "description": "Développer des solutions aux problèmes complexes des clients, optimiser l'application, assister à l'évolution et optimisation des fonctionnalités du système, assurer la maintenance et la qualité des applications, analyser et résoudre les problèmes émergents.",
+      "technologies": ["Java", "Spring core", "Spring security", "AWS", "SQL Server", "Jira", "Control-M", "JPA/Hibernate", "JUnit"]
+    },
+    {
+      "position": "Développeur FullStack",
+      "company": "Ed-All (Koolskools)",
+      "years": "Jan. 2018 – Déc. 2018",
+      "description": "Identifier les besoins des utilisateurs, développer des solutions backend et frontend, déboguer et ré-usiner le code existant, optimiser les fonctionnalités, développer des tests et modules de gestion.",
+      "technologies": ["Python", "Django", "ReactJS", "Selenium", "MySQL", "MongoDB", "Underscore.js", "Linux (Ubuntu)"]
+    },
+    {
+      "position": "Développeur SharePoint / Angular",
+      "company": "Proskills",
+      "years": "Oct 2017 – Jan. 2018",
+      "description": "Identifier les besoins des clients, migrer vers une solution cloud SharePoint, intégrer de nouveaux membres au projet.",
+      "technologies": ["SharePoint", "Angular4", "Git", "REST API"]
+    },
+    {
+      "position": "Analyste / Développeur J2EE",
+      "company": "Marsa Maroc",
+      "years": "Mars. 2017 – Sep. 2017",
+      "description": "Développer une application web intranet de gestion des employés, modules de gestion des utilisateurs et vacances, concevoir et implémenter des applications web.",
+      "technologies": ["J2EE", "Spring core", "Spring Security", "Ionic", "Angular2", "MySQL", "JPA/Hibernate", "JUnit"]
+    }
+  ],
+  "skills": [
+    "J2EE", "Spring", "Python", "C#", "Django", "NextJs", "ReactJS", "Angular", "Ionic", "JQuery", "CSS", "SQL", "REST API", "UML", "Oracle", "MySQL", "SQL Server", "Selenium", "Sonar Cube", "Jenkins", "Jira", "AWS"
+  ],
+  "hobbies": [
+    "Boxe", "Soccer", "Voyages"
+  ]
+} 

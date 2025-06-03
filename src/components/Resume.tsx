@@ -9,7 +9,7 @@ const Resume = () => {
   const { lang } = useLanguage();
 
   useEffect(() => {
-    import("../data/profile.json")
+    import("../data/cv.json")
       .then((data) => {
         setSummary(data.default?.resume?.summary || data.resume?.summary || "");
       })
@@ -19,8 +19,7 @@ const Resume = () => {
   return (
     <section>
       <h2 className="text-xl font-bold mb-2">{translations[lang].resume}</h2>
-      {/* <p>{summary}</p> */}
-      <p>{translations[lang].summary}</p>
+      <p>{summary}</p>
     </section>
   );
 };
