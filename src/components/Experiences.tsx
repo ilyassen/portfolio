@@ -25,14 +25,14 @@ const Experiences = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-bold mb-2">{translations[lang].experiences}</h2>
+      <h2 className="text-4xl font-bold mb-5">{translations[lang].experiences}</h2>
       {experiences.length === 0 ? (
         <p>No experiences found.</p>
       ) : (
-        <ul className="space-y-4">
+        <ul className="space-y-4 ">
           {experiences.map((exp, idx) => (
-            <li key={idx} className="border-b pb-2">
-              <div className="font-semibold">{exp.position} @ {exp.company}</div>
+            <li key={idx} className="border-b pb-5">
+              <div className="font-semibold">{exp.position} {translations[lang].at} <span className="bg-blue-100  font-semibold me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800">{exp.company}</span></div> 
               <div className="text-sm text-gray-500">{exp.years}</div>
               <div>{exp.description}</div>
             </li>

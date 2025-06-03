@@ -6,7 +6,8 @@ export const translations = {
     experiences: "Work Experience",
     skills: "Skills",
     hobbies: "Hobbies",
-    portfolio: "My Portfolio"
+    portfolio: "My Portfolio",
+    at:"at"
   },
   FR: {
     resume: "Résumé",
@@ -15,6 +16,7 @@ export const translations = {
     experiences: "Expérience Professionnelle",
     skills: "Compétences",
     hobbies: "Loisirs",
-    portfolio: "Mon Portfolio"
+    portfolio: "Mon Portfolio",
+    at:"à"
   }
 }; 

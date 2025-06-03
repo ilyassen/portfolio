@@ -3,9 +3,12 @@
 import { useEffect, useState } from "react";
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
+import {  technologyIcons,  } from '../data/iconConfig';
+import Image from 'next/image';
 
 const Skills = () => {
   const [skills, setSkills] = useState<string[]>([]);
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
   const { lang } = useLanguage();
 
   useEffect(() => {
@@ -17,15 +20,38 @@ const Skills = () => {
   }, []);
 
   return (
-    <section>
-      <h2 className="text-xl font-bold mb-2">{translations[lang].skills}</h2>
+    <section className="relative">
+      <h2 className="text-4xl font-bold mb-2">{translations[lang].skills}</h2>
       {skills.length === 0 ? (
         <p>No skills found.</p>
       ) : (
-        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 list-none p-0">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 list-none p-0 skills">
           {skills.map((skill, idx) => (
-            <li key={idx} className="bg-gray-200  rounded px-3 py-1 text-center">
+            <li 
+              key={idx} 
+              className="bg-gray-200 rounded px-3 py-1 text-center relative hover:bg-gray-300 transition-colors"
+              onMouseEnter={() => setHoveredSkill(skill)}
+              onMouseLeave={() => setHoveredSkill(null)}
+            >
               {skill}
+              {hoveredSkill === skill && (
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 bg-white p-2 rounded-lg shadow-lg border border-gray-200">
+                  {technologyIcons.find((icon: {name: string}) => icon.name.toLowerCase() === skill.toLowerCase()) ? (
+                    <Image 
+                      src={technologyIcons.find((icon) => icon.name.toLowerCase() === skill.toLowerCase())!.link}
+                      alt={skill}
+                      className="w-12 h-12 mx-auto mb-1"
+                      width="50"
+                      height="50"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 mb-1 bg-gray-200 rounded-full flex items-center justify-center">
+                      <span className="text-lg font-medium">{skill[0]}</span>
+                    </div>
+                  )}
+                  <span className="text-sm font-medium text-gray-700">{skill}</span>
+                </div>
+              )}
             </li>
           ))}
         </ul>
@@ -34,4 +60,4 @@ const Skills = () => {
   );
 };
 
-export default Skills; 
+export default Skills;

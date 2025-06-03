@@ -24,13 +24,13 @@ const Education = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-bold mb-2">{translations[lang].education}</h2>
+      <h2 className="text-4xl font-bold mb-5">{translations[lang].education}</h2>
       {education.length === 0 ? (
         <p>No education data found.</p>
       ) : (
         <ul className="space-y-4">
           {education.map((item, idx) => (
-            <li key={idx} className="border-b pb-2">
+            <li key={idx} className="border-b pb-5">
               <div className="font-semibold">{item.degree}</div>
               <div className="text-sm text-gray-500">{item.institution} ({item.year})</div>
             </li>

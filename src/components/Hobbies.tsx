@@ -18,7 +18,7 @@ const Hobbies = () => {
 
   return (
     <section>
-      <h2 className="text-xl font-bold mb-2">{translations[lang].hobbies}</h2>
+      <h2 className="text-4xl font-bold mb-2">{translations[lang].hobbies}</h2>
       {hobbies.length === 0 ? (
         <p>No hobbies found.</p>
       ) : (
