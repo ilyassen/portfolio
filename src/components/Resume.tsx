@@ -17,9 +17,9 @@ const Resume = () => {
   }, []);
 
   return (
-    <section>
-      <h2 className="text-4xl font-bold mb-5">{translations[lang].resume}</h2>
-      <p>{summary}</p>
+    <section className="text-center text-lg m-auto w-2/3">
+      <h2 className="text-4xl font-bold mb-10">{translations[lang].resume}</h2>
+      <p className="text-lg mb-10">{summary}</p>
     </section>
   );
 };

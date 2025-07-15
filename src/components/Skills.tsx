@@ -20,8 +20,8 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="relative">
-      <h2 className="text-4xl font-bold mb-2">{translations[lang].skills}</h2>
+    <section className="relative text-center text-lg m-auto w-2/3 mb-10 ">
+      <h2 className="text-4xl font-bold mb-10">{translations[lang].skills}</h2>
       {skills.length === 0 ? (
         <p>No skills found.</p>
       ) : (
