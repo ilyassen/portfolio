@@ -8,6 +8,7 @@ type EducationItem = {
   degree: string;
   institution: string;
   year: string;
+  logo: string;
 };
 
 const Education = () => {
@@ -31,6 +32,7 @@ const Education = () => {
         <ul className="space-y-4">
           {education.map((item, idx) => (
             <li key={idx} className=" pb-5">
+              <div><img src={item.logo} alt={item.degree} className="w-25 h-20 text-center mx-auto" /></div>
               <div className="font-semibold">{item.degree}</div>
               <div className="text-sm text-gray-500">{item.institution} ({item.year})</div>
             </li>
