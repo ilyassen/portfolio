@@ -29,7 +29,7 @@ const Skills = () => {
           {skills.map((skill, idx) => (
             <li 
               key={idx} 
-              className="bg-gray-200 rounded px-3 py-1 text-center relative hover:bg-gray-300 transition-colors"
+              className="bg-gray-200 rounded px-3 py-1 text-center relative hover:bg-blue-200 transition-colors"
               onMouseEnter={() => setHoveredSkill(skill)}
               onMouseLeave={() => setHoveredSkill(null)}
             >
