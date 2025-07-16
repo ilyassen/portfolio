@@ -32,7 +32,7 @@ const Education = () => {
         <ul className="space-y-4">
 
           {education.map((item, idx) => (
-            <a href="#" key={idx} className="block text-center m-auto max-w-sm p-10 mb-10 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-100">
+            <a href="#" key={idx} className="block text-center m-auto max-w-2xl p-10 mb-10 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-100">
 
             <li key={idx} className=" pb-5">
               <div><img src={item.logo} alt={item.degree} className="w-25 h-20 text-center mx-auto m-1" /></div>
