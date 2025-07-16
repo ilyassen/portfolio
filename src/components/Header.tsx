@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full py-4 bg-gray-900 text-white text-center text-2xl font-bold shadow-md flex justify-between items-center px-8">
+    <header className="sticky top-0 z-50  w-full py-4 bg-gray-900 text-white text-center text-2xl font-bold shadow-md flex justify-between items-center px-8">
       <span>{translations[lang].portfolio}</span>
       <div className="flex items-center gap-2">
         <button
