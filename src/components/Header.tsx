@@ -16,8 +16,26 @@ const Header = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
+
+
+ let lastScrollTop = 100;
+
+window.addEventListener('scroll', function() {
+ 
+  const header = document.getElementById('header');
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop <= lastScrollTop) {
+    // Scrolling down
+    header.classList.add('hidden');
+  } else {
+    // Scrolling up
+    header.classList.remove('hidden');
+  }
+
+});
+
   return (
-    <header className="sticky top-0 z-50  w-full py-4 bg-gray-900 text-white text-center text-2xl font-bold shadow-md flex justify-between items-center px-8">
+    <header id='header' className="sticky top-0 z-50  w-full py-4 bg-gray-900 text-white text-center text-2xl font-bold shadow-md flex justify-between items-center px-8 hidden">
       <span>{translations[lang].portfolio}</span>
       <div className="flex items-center gap-2">
         <button
