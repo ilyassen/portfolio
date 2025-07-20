@@ -36,7 +36,7 @@ const Experiences = () => {
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="bg-white p-10 my-10 dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded-lg shadow-sm hover:shadow-md hover:bg-gray-100 dark:hover:bg-gray-500 transition-all duration-300 "
+              className=" p-10 my-10 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm hover:shadow-md bg-stone-100 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 "
             >
               {/* Header with position and company */}
               <div className="mb-4">

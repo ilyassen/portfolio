@@ -23,7 +23,7 @@ const Resume = () => {
       return (
         <>
           {parts[0]}
-          <span className="font-bold bg-gradient-to-r from-blue-500 to-purple-500 dark:from-purple-100 dark:to-indigo-500 bg-clip-text text-transparent">
+          <span className="font-bold bg-gradient-to-r from-blue-500 to-purple-500 dark:from-purple-700 dark:to-indigo-100 bg-clip-text text-transparent">
             Ilyas
           </span>
           {parts[1]}

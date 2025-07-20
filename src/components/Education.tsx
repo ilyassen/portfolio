@@ -35,7 +35,7 @@ const Education = () => {
           {education.map((item, idx) => (
             <li
               key={idx}
-              className="block m-auto max-w-4xl  my-10 bg-white dark:bg-gray-600 border border-gray-200 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-100 dark:hover:bg-gray-500 transition-colors overflow-hidden"
+              className="block m-auto max-w-4xl  my-10  bg-stone-100 hover:bg-gray-200 dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm  dark:hover:bg-gray-500 transition-colors overflow-hidden"
             >
               <div className="flex ">
                 {/* Image section - 30% */}
