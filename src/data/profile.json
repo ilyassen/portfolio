@@ -1,7 +1,6 @@
 {
   "resume": {
     "summary": "Experienced web developer with a passion for building beautiful and functional user interfaces."
- 
   },
   "education": [
     {
@@ -24,16 +23,6 @@
       "description": "Built responsive websites and web apps for various clients."
     }
   ],
-  "skills": [
-    "JavaScript",
-    "React",
-    "Next.js",
-    "CSS",
-    "Tailwind CSS"
-  ],
-  "hobbies": [
-    "Photography",
-    "Traveling",
-    "Reading tech blogs"
-  ]
-} 
+  "skills": ["JavaScript", "React", "Next.js", "CSS", "Tailwind CSS"],
+  "hobbies": ["Photography", "Traveling", "Reading tech blogs"]
+}

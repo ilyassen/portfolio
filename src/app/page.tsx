@@ -8,10 +8,10 @@ import Hobbies from '../components/Hobbies';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white transition-colors">
       <Header />
       {/* Main content */}
-      <div className="flex-1 space-y-8 p-4 bg-gray-100 overflow-hidden ">
+      <div className="flex-1 space-y-8 p-4 bg-gray-100 dark:bg-gray-800 transition-colors">
         <Resume />
         <Education />
         <Experiences />
