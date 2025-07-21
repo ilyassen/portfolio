@@ -3,7 +3,7 @@
 // import { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 
 const Resume = () => {
   // const [summary, setSummary] = useState("");
@@ -21,20 +21,32 @@ const Resume = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const element  = document.getElementById("Arrow");
-      // Show Arrow when above 100px, hide when below 100px
+      const arrowElement = document.getElementById("Arrow");
+      const bracketElement = document.getElementById("LeftBracket");
+      
+      // Show/Hide Arrow when above 100px
       if(scrollTop >= 100){
-        console.log("Entter");
-        element?.classList.add("hidden");
+        arrowElement?.classList.add("hidden");
       }else{
-        element?.classList.remove("hidden");
+        arrowElement?.classList.remove("hidden");
+      }
+      
+      // Animate the < symbol based on scroll
+      if(bracketElement) {
+        // Calculate movement: move left as we scroll down (max 50px)
+        const maxScroll = 300; // Maximum scroll distance to consider
+        const maxMovement = 200; // Maximum pixels to move left
+        const movement = Math.min((scrollTop / maxScroll) * maxMovement, maxMovement);
+        
+        bracketElement.style.transform = `translateX(-${movement}px)`;
       }
     };
-      window.addEventListener("scroll", handleScroll);
+    
+    window.addEventListener("scroll", handleScroll);
 
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const renderIntroWithStyledName = (text: string) => {
@@ -69,7 +81,12 @@ const Resume = () => {
     <section className="flex items-center justify-center h-screen mx-auto text-lg w-2/3 text-gray-900 dark:text-white transition-colors font-cabinet">
       <div className="text-center space-y-6 -mt-30">
         {/* <h2 className="w-full text-4xl font-bold mb-10 text-gray-900 dark:text-white">{translations[lang].resume}</h2> */}
-        <p className="text-7xl font-medium text-left text-shadow-lg/20 text-blue-500 dark:text-purple-700">&lt;</p>
+        <p 
+          id="LeftBracket"
+          className="text-7xl duration-700 ease-in-out font-medium text-left text-shadow-lg/20 text-blue-500 dark:text-purple-700 transition-transform "
+        >
+          &lt;
+        </p>
         <p className="text-4xl mb-20 font-medium">
           {renderIntroWithStyledName(translations[lang].intro)}
         </p>
