@@ -41,7 +41,7 @@ const Education = () => {
             >
               <div className="flex ">
                 {/* Image section - 30% */}
-                <div className="h-50 w-4/12 flex items-center justify-center bg-gradient-to-r from-blue-50 to-neutral-200
+                <div className="h-50 w-4/12 flex items-center justify-center bg-gradient-to-r from-blue-100 to-neutral-300
                               hover:from-blue-50 hover:to-indigo-100 dark:from-blue-900 dark:to-indigo-900 dark:hover:from-blue-800 dark:hover:to-indigo-800
                               hover:shadow-sm hover:scale-105 transition-all duration-200">
                   <img
