@@ -68,7 +68,9 @@ export const technologyIcons: TechnologyIcon[] = [
     name: "SQL",
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
-  //   { name: "REST API", link: "https://www.svgrepo.com/show/303229/rest-api.svg" },
+    { 
+    name: "REST", 
+    link: "icons/skills/REST.svg" },
   //   { name: "UML", link: "https://www.svgrepo.com/show/354252/uml.svg" },
   {
     name: "Oracle",

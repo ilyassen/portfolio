@@ -26,7 +26,7 @@ const Experiences = () => {
 
   return (
     <section className="text-center text-lg m-auto w-2/3 transition-colors">
-      <h2 className="text-5xl font-bold dark:text-gray-300 text-gray-700 mb-10 mt-20">
+      <h2 className="text-6xl font-bold dark:text-gray-300 text-black mb-30 mt-50 text-shadow-lg/20 ">
         {translations[lang].experiences}
       </h2>
       {experiences.length === 0 ? (
@@ -36,7 +36,8 @@ const Experiences = () => {
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className=" p-10 my-10 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm hover:shadow-md bg-stone-100 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 "
+              className=" p-10 my-10 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm hover:shadow-md
+                        bg-stone-100 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300  hover:scale-105"
             >
               {/* Header with position and company */}
               <div className="mb-4">

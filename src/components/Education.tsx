@@ -25,7 +25,8 @@ const Education = () => {
 
   return (
     <section className="text-center text-lg  text-gray-900 dark:text-white transition-colors">
-      <h2 className="text-5xl font-bold text-gray-700 dark:text-gray-300 mb-10">
+      <h2 className="text-6xl font-bold text-black  dark:text-gray-300 mt-10 mb-30
+                     text-shadow-lg/20 ">
         {translations[lang].education}
       </h2>
       {education.length === 0 ? (
@@ -35,11 +36,12 @@ const Education = () => {
           {education.map((item, idx) => (
             <li
               key={idx}
-              className="block m-auto max-w-4xl  my-10  bg-stone-100 hover:bg-gray-200 dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm  dark:hover:bg-gray-500 transition-colors overflow-hidden"
+              className="block m-auto max-w-4xl  my-10  bg-stone-100 hover:bg-gray-200 dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm 
+                       dark:hover:bg-gray-500  hover:scale-105 transition-all duration-300 overflow-hidden"
             >
               <div className="flex ">
                 {/* Image section - 30% */}
-                <div className="h-50 w-4/12 flex items-center justify-center bg-gradient-to-r from-blue-100 to-indigo-200
+                <div className="h-50 w-4/12 flex items-center justify-center bg-gradient-to-r from-blue-50 to-neutral-200
                               hover:from-blue-50 hover:to-indigo-100 dark:from-blue-900 dark:to-indigo-900 dark:hover:from-blue-800 dark:hover:to-indigo-800
                               hover:shadow-sm hover:scale-105 transition-all duration-200">
                   <img

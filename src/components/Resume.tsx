@@ -46,8 +46,9 @@ const Resume = () => {
     */
   return (
     <section className="flex items-center justify-center h-screen mx-auto text-lg w-2/3 text-gray-900 dark:text-white transition-colors font-cabinet">
-      <div className="text-center space-y-6">
+      <div className="text-center space-y-6 -mt-30">
         {/* <h2 className="w-full text-4xl font-bold mb-10 text-gray-900 dark:text-white">{translations[lang].resume}</h2> */}
+        <p className="text-7xl font-medium text-left text-shadow-lg/20 text-blue-500 dark:text-purple-700">&lt;</p>
         <p className="text-4xl mb-20 font-medium">
           {renderIntroWithStyledName(translations[lang].intro)}
         </p>
