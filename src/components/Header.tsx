@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
-import { translations } from "../data/translations";
+// import { translations } from "../data/translations";
 
 const Header = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);

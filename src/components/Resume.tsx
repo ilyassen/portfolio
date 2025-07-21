@@ -3,6 +3,7 @@
 // import { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
+import React, { useState, useEffect } from "react";
 
 const Resume = () => {
   // const [summary, setSummary] = useState("");
@@ -15,6 +16,26 @@ const Resume = () => {
   //     })
   //     .catch(() => setSummary("Could not load resume summary."));
   // }, []);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const element  = document.getElementById("Arrow");
+      // Show Arrow when above 100px, hide when below 100px
+      if(scrollTop >= 100){
+        console.log("Entter");
+        element?.classList.add("hidden");
+      }else{
+        element?.classList.remove("hidden");
+      }
+    };
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+  }, []);
 
   const renderIntroWithStyledName = (text: string) => {
     // Split the text around "Ilyas" and style it differently
@@ -53,6 +74,12 @@ const Resume = () => {
           {renderIntroWithStyledName(translations[lang].intro)}
         </p>
         <p className="text-lg font-normal">{translations[lang].summary}</p>
+        <p className="text-center mt-80" id="Arrow">
+          <svg className="size-8 animate-bounce m-auto" fill="none" viewBox="0 0 24 24" strokeWidth={1.6} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+          </svg>
+        </p>
+        
       </div>
     </section>
   );

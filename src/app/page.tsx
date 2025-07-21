@@ -11,7 +11,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
       <Header />
       {/* Main content */}
-      <div className="flex-1 space-y-8 p-4 bg-gray-100 dark:bg-gray-900 transition-colors">
+      <div className="flex-1 space-y-8 p-4 bg-gray-100 dark:bg-gray-900 transition-colors scroll-smooth">
         <Resume />
         <Education />
         <Experiences />
